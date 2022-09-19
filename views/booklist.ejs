@@ -1,0 +1,59 @@
+<%-include("partials/header"); -%>
+<div class="book-list">
+    <div class="heading">
+    <h1>LIST OF BOOKS</h1>
+</div>
+<div class="for-search">
+    <input  id="inputName" onkeyup="sendData()" type="text" placeholder="search with name" name="search" required>
+</div>
+<br>
+<table class="table-content" id="myTable" scroll>
+    <tr>
+        <th>TITLE</th>
+        <th>AUTHOR</th>
+        <th>COPIES LEFT</th>
+        <th>MORE</th>
+    </tr>
+<%books.forEach(function(book){%>
+    <tr>
+        <td>
+         <%= book.title %>
+        </td>
+        <td>
+            <%= book.author %>
+        </td>
+        <td>
+            <%= book.copies%>
+        </td>
+        <td>
+            <a href="booklist/<%=book._id%>">Read more</a>
+        </td>
+    </tr>
+    <%})%>
+</table>
+</div>
+<script type="text/javascript">
+   
+   function sendData()
+   {
+      var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("inputName");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+//   console.log(tr)
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<%-include("partials/footer"); -%>

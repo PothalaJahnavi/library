@@ -1,0 +1,20 @@
+<%-include("partials/header"); -%>
+<div class="books-compose">
+    <h1>ADD A BOOK</h1>
+    <form action="/compose" class="forms" method="post">
+        <label for="name">TITLE</label><br>
+        <input type="text" name="postTitle"  autocomplete="off"><br>
+        <label for="">AUTHOR</label><br>
+        <input type="text" name="postAuthor"  autocomplete="off"><br>
+          <label for="">COPIES LEFT</label><br>
+          <input type="text" name="postCopies"  autocomplete="off"><br>
+          <label for="">CONTENT</label><br>
+          <textarea name="postMatter" id="" cols="66" rows="6" scroll  autocomplete="off"></textarea><br>
+          <label for="">IMG URL</label><br>
+          <input type="text" name="postUrl"><br><br>
+          <button class="btn btn-dark" type="submit">SUBMIT</button>
+    </form>
+    
+</div>
+
+<%-include("partials/footer"); -%>

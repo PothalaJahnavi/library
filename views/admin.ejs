@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+  <div class="admin-login">
+    <div class="heading">    <h1>ADMIN LOGIN</h1></div>
+    <form action="/login" class="forms" method="post">
+        <label for="name">USER NAME</label><br>
+        <input type="text" name="checkuser" required autocomplete="off"><br><br>
+        <label for="password" >PASSWORD</label><br>
+        <input type="password" name="checkpassword" required  autocomplete="off" ><br><br>
+        <button class="btn btn-dark" type="submit" onclick="">SUBMIT</button>
+    </form>
+  </div>
+<%- include("partials/footer"); -%>

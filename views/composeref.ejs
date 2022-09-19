@@ -1,0 +1,17 @@
+<%-include("partials/header"); -%>
+<div class="res-compose">
+    <h1>ADD A RESOURCES</h1>
+    <form action="/composeref" class="forms" method="post">
+        <label for="text">TITLE</label><br>
+        <input type="text" name="resTitle"  autocomplete="off"><br>
+        <label for="text">VIDEO LINK</label><br>
+        <input type="text" name="resVideo"  autocomplete="off" ><br>
+        <label for="text">DOC LINK</label><br>
+        <input type="text" name="resDoc"  autocomplete="off"><br>
+        <button class="btn btn-dark" type="submit">SUBMIT</button>
+
+    </form>
+    
+</div>
+
+<%-include("partials/footer"); -%>

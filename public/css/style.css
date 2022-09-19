@@ -1,0 +1,294 @@
+body{
+  display: flex;
+  flex-direction:column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.main{
+     width:100%;
+    height: 120vh;
+   background-image:linear-gradient(rgba(10,24,94,0.5),rgba(10, 24, 94, 0.5)),url("../images/lib1.jpg");
+   background-position: center;
+   background-size: cover;
+}
+.navbar{
+    background-color:darkblue;
+    color:white;
+    font-weight: 700;
+}
+.footer{
+    padding: 10px;
+    background-color:darkblue;
+    color:white;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+}
+.main h1{
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 50px;
+  align-items: center;
+  text-align: center;
+}
+.main .row{
+  display: flex;
+  height: 88%;
+  align-items: center;
+  margin-top: 3rem;
+}
+.main col{
+  flex-basis: 50%;
+}
+.main .col .card{
+  height: 230px;
+  width: 230px;
+  /* display: flex; */
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  transition: transform 0.5s;
+}
+.main .col .card1{
+  background-image: url(../images/card1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.main .col .card2{
+  background-image: url(../images/card2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.main .col .card3{
+  background-image: url(../images/card3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.main .col .card4{
+  background-image: url(../images/card4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.main .col .card:hover{
+  transform: translateY(-20px);
+}
+/* about section */
+#mycarousel{
+  height: 100vh;
+  width: 100%;
+}
+.carousel-item img{
+  height:100vh;
+}
+.carousel-item{
+ /* height: 100vh; */
+ background: no-repeat scroll center scroll;
+ -webkit-bakground-size:cover;
+ background-size: cover;
+}
+.carousel-caption {
+  margin:auto;
+  box-shadow:0 0 10px black;
+  background-color:rgb(69, 72, 75)
+}
+.carousel-caption  p{
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+  color: bisque;
+}
+/* admin login */
+
+.heading{
+    margin-top: 3%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+form{ 
+    color: aliceblue;
+    width: 400px;
+    height: 300px;
+    box-shadow:0 0 10px black;
+    padding-top:30px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color:rgb(135, 179, 214);
+  }
+  label{
+    font-size: 25px;
+    font-weight:700;
+    color: darkblue;
+    
+  }
+  input{
+    width: 300px;
+    padding: 1%;
+    border-color: azure;
+    border-radius:8px;
+  }
+  /* for compose */
+  .books-compose form{
+    margin-top: 4%;
+    width: 600px;
+    height: 660px;
+    margin-bottom: 2%;
+  }
+  .books-compose input{
+    width: 500px;
+    padding: 2%;
+    border-color: azure;
+    border-radius:10px;
+  }
+  /* for booklist */
+  .table-content{
+    box-shadow:0 0 10px black;
+    border: 2px solid black;
+    margin-top: 20px;
+    overflow-y: scroll;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 3%;
+  }
+  th{
+    width:18%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4%;
+      border: 2px solid black;
+      background-color: rgb(135, 179, 214);
+  }
+  .table-content tr{
+    border-bottom: 1px solid gray;
+  }
+  .for-search{
+    margin-right: 0px;
+  }
+  .for-search input{
+      padding: 0.5%;
+      margin-right: 5%;
+      margin-left: 5%;
+      width: 90%;
+      border: 2px solid grey;
+  }
+   .book-display{
+      margin-left:5%;
+      margin-right:5%;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+   }
+   .book-display h1{
+    color:saddlebrown;
+    font-size:2.5rem;
+   }
+   .book-display p{
+    font-size: 18px;
+    font-style: italic;
+    color: darkblue;
+   }
+   .book-display img{
+      height:250px;
+      width:250px;
+   }
+   .books-compose h1{
+    text-align: center;
+    color:brown;
+    font-weight: 700;
+   }
+   .res-head{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 800;
+    font-style: initial;
+    font-size: 45px;
+    color: brown;
+    margin-bottom: 2rem;
+   }
+   .resources h2{
+       text-align: center;
+       font-weight: 500;
+       color:darkblue;
+       margin-bottom: 1rem;
+   }
+   .resource{
+    box-shadow: 0 0 3px 2px black;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    background: aliceblue;
+    padding: 2%;
+    border-radius: 8px;
+   }
+   .res-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+   }
+   .res-btn{
+    border-radius: 8px;
+    background-color:cornflowerblue;
+    margin-left: 10%;
+    width: 15%;
+    
+   }
+   .res-btn a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:500;
+    color: antiquewhite;
+   }
+   .types{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:25px;
+    margin-top: 5rem;
+    justify-content: space-between;
+   }
+   .typ-op{
+    align-items: center;
+    text-align: center;
+    margin-left:8%;
+    justify-content: center;
+    box-shadow: 0 0 3px 2px black;
+    background: aliceblue;
+    padding: 2%;
+    border-radius: 8px;
+   }
+   .typ-btn{
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding:5px;
+    background-color:cornflowerblue;
+   }
+   .typ-op img{
+    width:100px;
+   }
+   .typ-btn a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:500;
+    color:blanchedalmond
+   
+   }
+   .res-compose h1{
+    text-align: center;
+    color:saddlebrown;
+    font-size:2.5rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+   }

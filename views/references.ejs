@@ -1,0 +1,50 @@
+<%-include("partials/header"); -%>
+<h1 class="res-head">LEARNING RESOURCES</h1>
+<div class="for-search">
+  <input  id="inputNameRef" onkeyup="sendRef()" type="text" placeholder="search with name" name="searchref"required>
+</div>
+<br><br>
+      <div class="resources" id="allres" >
+        <%resources.forEach(function(resource){%>
+          <div class="resource" id="res">
+            <h2><%=resource.refTitle%></h2>
+            <div class="res-content">
+              <h4>Start Your Learning With The Best Video Tutorials</h4>
+              <button class="res-btn"><a href="<%=resource.refVideo%>">START</a></button>
+             </div>
+              <div class="res-content">
+                <h4>Recomended Documents To Start Your Learning</h4>
+                <button  class="res-btn"><a href="<%=resource.refDoc%>">START</a></button>
+              </div>            
+        </div>
+          <%})%>
+  </div>
+
+  <script type="text/javascript">
+   
+    function sendRef()
+    {
+       var inputref, filt,i, txtValue1,requi,all,reso;
+   inputref = document.getElementById("inputNameRef");
+   filt = inputref.value.toUpperCase();
+  //  reso=document.getElementById("allres");
+   all = document.getElementsByClassName("resource");
+   // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < all.length; i++) {
+          requi= all[i].getElementsByTagName("h2")[0];
+        if (requi) {
+       txtValue1 = requi.textContent || requi.innerText;
+       txtValue1=txtValue1.toUpperCase();
+       if (txtValue1.indexOf(filt) > -1) {
+         all[i].style.display = "";
+       } else {
+         all[i].style.display = "none";
+         }
+        console.log(txtValue1);
+         }
+       }
+ }
+ </script>
+<%-include("partials/footer"); -%>
+
+
