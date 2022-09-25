@@ -1,4 +1,5 @@
 // acquiring modules
+require("dotenv").config();
 const express=require("express");
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
@@ -12,7 +13,7 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 // connecting to database
-mongoose.connect("mongodb+srv://admin:admin@cluster0.kkcut4i.mongodb.net/library?retryWrites=true&w=majority",{useNewUrlParser:true});
+mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true});
 // creating a scheme for our database
 const bookSchema={
    title:String,
@@ -146,7 +147,7 @@ app.get("/update1/:id",(req,res)=>{
 
 
 
-const port=process.env.PORT||5000;
+const port=process.env.PORT;
 app.listen(port,()=>{
     console.log(`this app is running on port ${port}`);
 });
