@@ -13,7 +13,12 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 // connecting to database
-mongoose.connect(process.env.MONGO_URL,{useNewUrlParser:true});
+const CONNECTION_URL="mongodb+srv://admin:admin@cluster0.kkcut4i.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(CONNECTION_URL , { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
+    console.log("database Connected")
+  }).catch((err)=>{
+    console.log(err)
+  })
 // creating a scheme for our database
 const bookSchema={
    title:String,
